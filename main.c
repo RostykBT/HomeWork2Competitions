@@ -73,7 +73,7 @@ int GetFailures(float results[9], int failures[9])
 
 void PrintResults(char *athletes[9], int top3[3], int failures[9], int numberOfFailures)
 {
-    printf("Participants in competiotion: ");
+    printf("     ");
     for (int i = 0; i < 9; i++)
     {
         printf("%s ", athletes[i]);
