@@ -73,21 +73,22 @@ int GetFailures(float results[9], int failures[9])
 
 void PrintResults(char *athletes[9], int top3[3], int failures[9], int numberOfFailures)
 {
+    int i ;
     printf("Participants in competiotion: \n");
-    for (int i = 0; i < 9; i++)
+    for (i = 0; i < 9; i++)
     {
         printf("%s ", athletes[i]);
     }
     printf("\n");
 
     printf("\nTop three: \n");
-    for (int i = 1; i < 4; i++)
+    for (i = 0; i < 3; i++)
     {
-        printf("%d. place: %s \n", i, athletes[top3[i]]);
+        printf("%d. place: %s \n", i+1, athletes[top3[i]]);
     }
 
-    printf("\nUnsuccessful during the race (DNF): %d", numberOfFailures);
-    for (int i = 0; i < numberOfFailures; i++)
+    printf("\nUnsuccessful during the race (DNF): \n");
+    for (i = 0; i < numberOfFailures; i++)
     {
         printf("%s ", athletes[failures[i]]);
     }
